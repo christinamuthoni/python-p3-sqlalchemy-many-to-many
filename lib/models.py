@@ -10,6 +10,10 @@ metadata = MetaData(naming_convention=convention)
 
 Base = declarative_base(metadata=metadata)
 
+engine = create_engine('sqlite:///many_to_many.db')
+
+Base = declarative_base()
+
 game_user = Table(
     'game_users',
     Base.metadata,
